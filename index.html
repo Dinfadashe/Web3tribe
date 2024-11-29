@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>Web3.0Tribe</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .timeline-section {
+            height: 100vh; /* Set height to auto */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content vertically */
+ 
+        }
+
+        .home {
+            clip-path: inset(0 3% 0 3% round 5% 20% 0 10%);
+        }
+
+        .left-column,
+        .right-column {
+            opacity: 0;
+            transition: opacity 1.6s ease, transform 1.6s ease;
+        }
+
+        .left-column {
+            transform: translateX(-10px);
+        }
+
+        .right-column {
+            transform: translateX(10px);
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            color: white;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav li {
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        section hr {
+            margin: 2rem 0;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+
+        .grid-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .team-section {
+            padding: 2rem;
+            background-color: #f4f4f4;
+        }
+
+        footer {
+            padding: 2rem;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        button {
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .roadmap-section img {
+            width: 100%;
+            height: auto;
+        }
+        @media screen and (max-width: 768px) {
+            .grid-section {
+                grid-template-columns: 1fr;
+            }
+            .timeline-section{
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="primary-col">
+        <nav class=" absolute text-white top-0 left-0 right-0 p-4 z-10">
+            <div class="flex justify-between">
+              <div class="text-2xl font-bold">
+                <h1 class="italic">Web<span class="text-black">3.0</span>Trbe</h1>
+              </div>
+              <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                  <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="hidden md:flex space-x-4">
+                <a href="#Home" class="hover:underline">Home</a>
+                <a href="https://medium.com/@web3tribe.edu/introduction-web3-0-tribe-w3t-empowering-africa-through-blockchain-education-and-charity-9d45d55c6a94" class="hover:underline">Whitepaper</a>
+                <a href="#Contact" class="hover:underline">Contact</a>
+              </div>
+            </div>
+          </nav>
+          
+          <div id="mobile-menu" class="md:hidden fixed inset-0 bg-gray-800 bg-opacity-75 z-50 hidden">
+            <div class="flex justify-end p-4">
+              <button id="close-mobile-menu" class="text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-col items-end p-4 space-y-4">
+              <a href="#Home" class="text-white">Home</a>
+              <a href="https://medium.com/@web3tribe.edu/introduction-web3-0-tribe-w3t-empowering-africa-through-blockchain-education-and-charity-9d45d55c6a94" class="text-white">Whitepaper</a>
+              <a href="#Contact" class="text-white">Contact</a>
+
+            </div>
+          </div>
+    </section>
+    
+    <section id="section1 Home" class="timeline-section bg-gray-100 grid-section h-screen">
+        <div class="left-column ">
+            <div class="flex flex-col " >
+                <h2 class="text-3xl font-bold italic">Web3.0Tribe</h2>
+                <p class="text-2xl ">Empowering Africa through Blockchain Education and Charity.</p>
+                <button class="primary-col w-60"><a href="https://medium.com/@web3tribe.edu/introduction-web3-0-tribe-w3t-empowering-africa-through-blockchain-education-and-charity-9d45d55c6a94">Explore Our Whitepaper</a></button>
+            </div>
+            
+        </div>
+        <div class="right-column ">
+            <img src="./src/images/friends.jpg" alt="" class="object-contain w-full opacity-75 home">
+        </div>
+    </section>
+    
+    <section class="primary-col h-auto text-gray-100 ">
+        <h1 class="font-bold text-center text-3xl">Download Our App</h1>
+        <div class="md:flex justify-center space-y-2  md:p-2 md:space-x-4">
+            <div class=" border-2 border-white p-2 ">
+                <a href="" class="flex items-center md:p-2"> <img src="./src/images/icons/playstore.png" alt="" class="h-10 w-10"><span class="text-sm">Tribe App(coming soon)</span></a>
+            </div>
+            <div class="border-2 border-white p-2">
+                <a href="" class="flex items-center md:p-2"><img src="./src/images/icons/apple.png" alt="" class="h-10 w-10"><span class="text-sm">Tribe App(coming soon)</span></a>
+            </div>
+    
+        </div>
+    </section>
+    
+    <section id="section2" class="flex-around flex flex-col">
+        <h1 class="font-bold text-3xl text-center mb-4"></h1>
+        <div class="md:flex justify-around space-x-4 ">
+            <div class="flex flex-col items-center hover:bg-gray-100 p-4">
+                <img class="small-img" src="./src/images/icons/users-alt.png" alt="">
+                <p class="text-sm text-gray-600">Blockchain & Crypto Education</p>
+            </div>
+            <div class="flex flex-col items-center hover:bg-gray-100 p-4 ">
+                <img class="small-img" src="./src/images/icons/saving.png" alt="">
+                <p class="text-sm text-gray-600">Learn to Earn</p>
+            </div>
+            <div class="flex flex-col items-center hover:bg-gray-100 p-4 ">
+                <img class="small-img" src="./src/images/icons/charity.png" alt="">
+                <p class="text-sm text-gray-600">Charitable Initiatives</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="section4" class="timeline-section grid-section bg-gray-100 ">
+        <div class="left-column">
+            <h2 class="text-3xl font-bold">About Us</h2>
+            <p>Web3.0 Tribe (W3T) is a visionary organization with a mission to catalyze change and empowerment across 
+                Africa and beyond through the transformative potential of blockchain technology. W3T is not just a platform; 
+                it’s a movement that envisions a future where
+                 individuals and communities in Africa are equipped with the knowledge and resources to thrive in the blockchain and cryptocurrency ecosystem.</p>
+        <button class="primary-col hover:text-gray-600"><a href="https://medium.com/@web3tribe.edu/introduction-web3-0-tribe-w3t-empowering-africa-through-blockchain-education-and-charity-9d45d55c6a94">Read More</a></button>
+                </div>
+        <div class="right-column">
+            <img src="./src/images/about.svg" alt="">
+        </div>
+    </section>
+    
+    <section id="section5" class="timeline-section bg-gray-200 grid-section">
+        <div class="left-column">
+            <img src="./src/images/about22.jpg" alt="" class="opacity-75">
+        </div>
+        <div class="right-column">
+            <h2 class="text-3xl font-bold">Our Key Initiatives</h2>
+            <p class="">1. Accessible Learning: We offer blockchain education that caters to all levels of learners, from beginners to experts, making it inclusive and accessible to a diverse audience.</p>
+            <p> 2. Community Building: Web3.0 Tribe fosters a vibrant and supportive community where learners can collaborate, share experiences, and grow together.</p>
+            <p>3. Innovative Learning and Earning: Our platform features innovative ways for newcomers to earn cryptocurrency while learning, incentivizing continuous education. </p>
+            <p>4. Blockchain for Good: Through our charity initiatives, we channel resources and support to critical causes, striving to improve healthcare, education, and livelihoods for underserved communities. </p>
+            <p>5. Advocacy and Awareness: We are advocates for responsible blockchain and cryptocurrency adoption, promoting awareness of the technology’s potential and the importance of ethical usage.</p>
+            </div>
+    </section>
+    
+    
+    <section class="flex-center flex flex-col primary-col text-white">
+        <h1 class="text-3xl font-bold mb-2">Join Web3.0 Tribe with 5USDT as a Founder (Seed Investor)</h1>
+        <span class="text-gray-200 mb-4">Shape Crypto Education & Charity</span>
+        
+        <section class=" h-aut0 md:flex ">
+            <div class=" w-full">
+                Become Part of a Global Crypto Community:
+            </div>
+            <ul class=" w-full list-disc">
+                <li>Support Blockchain Education</li>   
+                <li>Contribute To Charity</li>
+            </ul>
+        </section>
+        
+        <button class="border-2 border-white p-2 md:p-6"> <a href="https://forms.gle/gmPUhBvky6ziz73k8" class="">Invest 5 USDT for 5000 W3T tokens</a></button>
+    </section>
+    
+    <section class="roadmap-section">
+        <img src="./src/images/roadmap.webp" alt="">
+    </section>
+    
+    <section class="team-section">
+        <h1 class="text-center text-3xl font-bold">Our Team</h1>
+        <p>Our team is led by a diverse and passionate core team, comprising blockchain enthusiasts, philanthropists, and talented developers hailing from various corners of the globe. While these visionaries currently choose to remain anonymous, their commitment to the project’s success is unwavering, driving the future of Web3.0 technology.</p>
+    </section>
+    
+   <footer id="Contact" class="bg-blue-900  text-white py-8 px-4 md:px-14">
+    <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+      <div class="md:col-span-2">
+        <h1 class="font-bold text-lg">Community</h1>
+        <ul>
+          <li class="hover:text-gray-400"><a href="https://medium.com/@web3tribe.edu">Medium</a></li>
+          <li class="hover:text-gray-400"><a href="https://x.com/_web3tribe?s=21">Twitter</a></li>
+          <li class="hover:text-gray-400"><a href="#">Discord</a></li>
+          <li class="hover:text-gray-400"><a href="https://t.me/Web3Tribee">Telegram</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-1">
+        <h1 class="font-bold text-lg">Quick-links</h1>
+        <ul>
+          <li class="hover:text-gray-400"><a href="#">Support</a></li>
+          <li class="hover:text-gray-400"><a href="#">Enquiries</a></li>
+          <li class="hover:text-gray-400"><a href="#">WhatsApp</a></li>
+          <li class="hover:text-gray-400"><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-2 md:flex md:flex-col items-center">
+        <h1 class="text-4xl font-bold mb-4 md:text-center">Our Partners:</h1>
+      </div>
+    </div>
+    <div class="flex justify-center italic mt-4 md:mt-8">2024 © <a class="" href="https://abimikuoshela.netlify.app/">Osh_la</a></div>
+  </footer>
+    
+    <script>
+        const sections = document.querySelectorAll('.timeline-section');
+      
+        let lastScrollTop = 0;
+      
+        function checkScroll() {
+          const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      
+          sections.forEach((section, index) => {
+            const rect = section.getBoundingClientRect();
+            const isVisible = rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+      
+            const leftColumn = section.querySelector('.left-column');
+            const rightColumn = section.querySelector('.right-column');
+              if (isVisible) {
+                leftColumn.style.opacity = '1';
+                leftColumn.style.transform = 'translateX(0)';
+      
+                rightColumn.style.opacity = '1';
+                rightColumn.style.transform = 'translateX(0)';
+              } else {
+                leftColumn.style.opacity = '0';
+                leftColumn.style.transform = 'translateX(-50px)';
+      
+                rightColumn.style.opacity = '0';
+                rightColumn.style.transform = 'translateX(50px)';
+              }
+            }
+          );
+      
+          lastScrollTop = scrollTop;
+        }
+      
+        document.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+  
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.remove('hidden');
+      });
+  
+      closeMobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+    </script>
+</body>
+</html>
